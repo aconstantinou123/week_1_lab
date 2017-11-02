@@ -52,23 +52,38 @@ def no_friends(people)
   return result
 end
 
-# puts @person5
+def total_age(people)
+  age = 0
+  for person in people
+    age += person[:age]
+  end
+  return age
+end
+
+def many_friends(people)
+  popular = []
+  for person in people
+    if person[:friends].length > 2
+      popular.push(person[:name])
+    end
+  end
+  return popular
+end
 # def same_tv_show(people)
 #   tv_shows = {}
 #   result = {}
 #
 #   for person in people
 #     show = person[:favourites][:tv_shows]
-#       if tv_shows[shows]
-#         tv_shows[show].push(person[:name]
+#       if tv_shows[show]
+#         tv_shows[show].push(person[:name])
 #       else
 #         tv_shows[show] = [person[:name]]
 #       end
-#
+#   end
 #   for show in tv_shows.keys
 #       if tv_shows[show].size > 1
 #           result[show] = tv_shows[show].reverse
 #       end
-#     end
-#
+#   end
 # end
