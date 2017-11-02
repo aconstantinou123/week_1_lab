@@ -106,11 +106,19 @@ end
 
   # 6. Find the total of everyone's money
   # (hint: use the people array)
-
+def test_find_money
+  result = find_money(@people)
+  assert_equal(143, result)
+end
 
   # 7. For two given people, allow the first person to loan a given value of money to the other
   # (hint: you need to pass in the lender, the lendee, and the amount for this function)
   # (hint2: You should test if both the lender's and the lendee's money have changed)
+def test_loan_money
+  loan_money(@person2, @person1, 2)
+  assert_equal(0, @person2[:monies])
+  assert_equal(3, @person1[:monies])
+end
 
 
   # 8. Find the set of everyone's favourite food joined together
