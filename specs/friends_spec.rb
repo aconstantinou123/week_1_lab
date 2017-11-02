@@ -123,6 +123,8 @@ end
 
   # 8. Find the set of everyone's favourite food joined together
   # (hint: concatenate the favourites/things_to_eat arrays together)
+# def test_favourte_foods
+
 
 
   # 9. Find people with no friends
@@ -131,5 +133,8 @@ end
 
   # Optional, VERY TOUGH
   # 10. Find the people who have the same favourite tv show
-
+#   def test_same_tv_show
+#     result = same_tv_show(@people)
+#     assert_equal( {"Pokemon" => ["Keith", "Val"]}, result)
+#   end
 end
