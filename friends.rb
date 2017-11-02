@@ -34,6 +34,25 @@ def loan_money(lender, lendee, amount)
  lendee[:monies] += amount
 end
 
+def favourite_foods(people)
+  foods = []
+  for person in people
+    foods.concat(person[:favourites][:things_to_eat])
+  end
+  return foods
+end
+
+def no_friends(people)
+  result = []
+  for person in people
+    if person[:friends].length == 0
+      result.push(person[:name])
+    end
+  end
+  return result
+end
+
+# puts @person5
 # def same_tv_show(people)
 #   tv_shows = {}
 #   result = {}
